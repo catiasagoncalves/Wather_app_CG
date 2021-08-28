@@ -10,18 +10,19 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/0816c385bd.js" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/style.css"/>
     <title>Weather App</title>
 </head>
 
 <body>
     <div class="container">
+        <div class="all-weather-app">
         <div class="weather-app">
-
 <form >
 <input type="search"  placeholder="Enter you location" autofocus="on">
 <button type="submit" class="btn btn-primary">Seach</button>     
 </form>
+<div class="overview-location">
 <h1>
     Luxembourg
 </h1>
@@ -33,42 +34,43 @@ Friday, 19:00
 clear
     </li>
    </ul>
+</div>
    <div class="row">
        <div class="col-6">
-           <img src="" alt="clear"/>
-           12ºC | ºF
-
+           <div class="weather-temperature">        
+           <img src="#" alt="clear"/>
+         <strong>12</strong> 
+         <span class="temperature-units"> ºC | <a href="#">ºF
+         </a>
+            </span>
        </div> 
+        </div>
        <div class="col-6">
            <ul>
                <li>
                    Real feel: 10ºC
                </li>
                <li>
-                   humidity: 10%
+                   Humidity: 10%
                </li>
                <li>
                    wind: 12 km/h
                </li>
            </ul>
-
        </div>
-
-
    </div>
-        
-    </div>
+</div>
+            
     <small>
-  
-    <a href="https://github.com/catiasagoncalves/Weather_CG" target="_blank" class="github">Open-source code,
+      <a href="https://github.com/catiasagoncalves/Weather_CG" target="_blank" class="github">Open-source code,
     </a>
     <span>
         by Cátia Gonçalves
     </span>
 </small>
+</div>
     </div>
         <script src="src/app.js">
     </script>
 </body>
-
 </html>
