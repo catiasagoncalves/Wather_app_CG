@@ -23,15 +23,14 @@
 <button type="submit" class="btn btn-primary">Seach</button>     
 </form>
 <div class="overview-location">
-<h1>
-    Luxembourg
+<h1 id="city">
+   
 </h1>
 <ul>
     <li>
 Friday, 19:00
     </li>
-    <li>
-clear
+    <li id="weather-description">
     </li>
    </ul>
 </div>
@@ -39,7 +38,7 @@ clear
        <div class="col-6">
            <div class="weather-temperature">        
            <img src="#" alt="clear"/>
-         <strong>12</strong> 
+         <strong id="temperature"></strong> 
          <span class="temperature-units"> ºC | <a href="#">ºF
          </a>
             </span>
@@ -48,13 +47,14 @@ clear
        <div class="col-6">
            <ul>
                <li>
-                   Real feel: 10ºC
+                   Real feel: <span id="feels-like"></span>ºC
                </li>
                <li>
-                   Humidity: 10%
+                   Humidity: <span id="humidity"></span>% 
                </li>
                <li>
-                   wind: 12 km/h
+                   wind: <span id="wind">
+                   </span> km/h
                </li>
            </ul>
        </div>
