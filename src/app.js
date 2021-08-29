@@ -41,9 +41,20 @@ iconElement.setAttribute(    "src",
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
-
+ function searchCity (city){
 let apiKey = "0bca7a6e963a4888aee2f2257270c526";
-let city= "Luxembourg";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
+ }
+
+function locationSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-location");
+  searchCity(cityInputElement.value);
+}
+
+let form = document.querySelector("#location-form");
+form.addEventListener("submit", locationSubmit);
+
+searchCity("Luxembourg");
 

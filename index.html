@@ -18,9 +18,15 @@
     <div class="container">
         <div class="all-weather-app">
         <div class="weather-app">
-<form >
-<input type="search"  placeholder="Enter you location" autofocus="on">
-<button type="submit" class="btn btn-primary">Seach</button>     
+<form id="location-form" class="mb-4">
+    <div class="row">
+        <div class="col-9">
+            <input type="search" placeholder="Enter a location..." class="form-control" id="city-location" autocomplete="off" />
+        </div>
+        <div class="col-3">
+            <input type="submit" value="Search" class="btn btn-primary" />
+        </div>
+    </div>
 </form>
 <div class="overview-location">
 <h1 id="city"> </h1>
@@ -60,7 +66,7 @@
 </div>
             
     <small>
-      <a href="https://github.com/catiasagoncalves/Weather_CG" target="_blank" class="github">Open-source code,
+      <a href="https://github.com/catiasagoncalves/Wather_app_CG/" target="_blank" class="github">Open-source code,
     </a>
     <span>
         by Cátia Gonçalves
