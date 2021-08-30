@@ -1,6 +1,6 @@
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
-  background-color: rgba(228, 233, 252, 0.856);
+  background-color: rgba(228, 233, 252);
 }
 .all-weather-app {
   max-width: 600px;
@@ -11,6 +11,7 @@ body {
   padding: 20px;
   border: 0.1px solid black;
   border-radius: 20px;
+  background-color: rgba(255, 240, 228, 0.2);
 }
 h1 {
   color: black;
@@ -44,9 +45,11 @@ li:first-letter {
   font-weight: 400;
 }
 .temperature-units {
-  position: fixed;
+  position: relative;
   font-size: 16px;
+  top: -34px;
 }
+
 a {
   text-decoration: none;
 }
@@ -57,4 +60,21 @@ a {
 .active:hover {
   text-decoration: none;
   color: black;
+}
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+.forecast-week-day {
+  font-size: 16px;
+}
+.forescast-temperature {
+  font-size: 13px;
+}
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+  background-color: rgb(136, 110, 248) !important;
+  border-color: rgb(136, 110, 248) !important;
 }
