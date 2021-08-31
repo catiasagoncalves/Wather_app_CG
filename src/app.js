@@ -20,6 +20,34 @@ function actualtDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} at ${hours}:${minutes}`;
 }
+
+function displayForecast(){
+  let forecastElement=document.querySelector("#forecast");
+  let forecastHTML=`<div class="row">`;
+
+  let days= ["Thu" , "Fri", "Sat", "Sun"];
+  days.forEach(function(day) {
+forecastHTML=forecastHTML + `
+  <div class="col-2">
+    <div class="forecast-week-day">
+         ${day}  
+    </div>
+     <img src="#" alt="">
+     <div class="forecast-temperature">
+    <span class="forecast-max-temp">
+        18ºC
+    </span>
+    <span class="forecast-min-temp">12ºC</span> 
+         </div>
+  </div>`;
+
+  }  );
+  
+  forecastHTML = forecastHTML + `<div>`;
+forecastElement.innerHTML=forecastHTML;
+}
+
+
 function displayTemperature (response){
    let temperatureElement=document.querySelector("#temperature");
   let cityElement=document.querySelector("#city");
@@ -30,7 +58,7 @@ function displayTemperature (response){
    let dateElement=document.querySelector("#date");
    let iconElement=document.querySelector("#icon");
 
-celsiusTemperature=response.data.main.temp;
+  celsiusTemperature=response.data.main.temp;
 
   temperatureElement.innerHTML=Math.round(celsiusTemperature);
   cityElement.innerHTML=response.data.name;
@@ -74,6 +102,8 @@ function showCelsiusTemperature (event){
   fahrenheitLink.classList.remove("active");
 }
 
+
+
 let form = document.querySelector("#location-form");
 form.addEventListener("submit", locationSubmit);
 
@@ -86,3 +116,4 @@ let celsiusLink=document.querySelector("#celsius-temp");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 searchCity("Luxembourg");
+displayForecast();

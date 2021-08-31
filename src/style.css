@@ -71,6 +71,9 @@ a {
 .forescast-temperature {
   font-size: 13px;
 }
+.forecast-min-temp {
+  opacity: 0.5;
+}
 .btn-primary,
 .btn-primary:hover,
 .btn-primary:active,
