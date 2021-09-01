@@ -94,9 +94,6 @@ iconElement.setAttribute(    "src",
   getForecast (response.data.coord);
 }
 
-
-
-
  function searchCity (city){
 let apiKey = "0bca7a6e963a4888aee2f2257270c526";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -108,36 +105,9 @@ function locationSubmit(event) {
   let cityInputElement = document.querySelector("#city-location");
   searchCity(cityInputElement.value);
 }
-function showFahrenheitTemperature (event){
-  event.preventDefault();
-  let fahrenheitTemperature= (celsiusTemperature*9)/5+32;
-  let temperatureElement=document.querySelector("#temperature");
-  temperatureElement.innerHTML=Math.round(fahrenheitTemperature);
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-
-}
-
-function showCelsiusTemperature (event){
-  event.preventDefault();
-  let temperatureElement=document.querySelector("#temperature");
-  temperatureElement.innerHTML=Math.round(  celsiusTemperature);
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-}
-
-
 
 let form = document.querySelector("#location-form");
 form.addEventListener("submit", locationSubmit);
-
-let celsiusTemperature= null;
-
-let fahrenheitLink=document.querySelector("#fahrenheit-temp");
-fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
-
-let celsiusLink=document.querySelector("#celsius-temp");
-celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 searchCity("Luxembourg");
 
