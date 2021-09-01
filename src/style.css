@@ -81,3 +81,7 @@ a {
   background-color: rgb(136, 110, 248) !important;
   border-color: rgb(136, 110, 248) !important;
 }
+.line {
+  border-left: 1px solid green;
+  height: 100px;
+}
