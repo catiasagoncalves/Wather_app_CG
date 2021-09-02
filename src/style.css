@@ -1,23 +1,22 @@
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
-  background-color: rgba(228, 233, 252);
+  background-color: rgb(172, 177, 214);
 }
 .all-weather-app {
-  max-width: 600px;
-  margin: 30px auto;
+  max-width: 800px;
+  margin: 40px auto;
 }
 
 .weather-app {
-  padding: 20px;
-  border: 0.1px solid black;
-  border-radius: 20px;
-  background-color: rgba(255, 240, 228, 0.2);
+  padding: 30px;
+  border: 0.2px solid black;
+  border-radius: 40px;
+  background-image: url(weather.jpg);
 }
 h1 {
   color: black;
   font-size: 33px;
   font-weight: 500;
-
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 ul {
@@ -53,6 +52,9 @@ li:first-letter {
 a {
   text-decoration: none;
 }
+.sources {
+  font-size: 11px;
+}
 .active {
   color: black;
   cursor: default;
@@ -78,10 +80,12 @@ a {
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:visited {
-  background-color: rgb(136, 110, 248) !important;
-  border-color: rgb(136, 110, 248) !important;
+  background-color: rgb(139, 148, 185) !important;
+  border-color: black !important;
+  color: black;
 }
-.line {
-  border-left: 1px solid green;
-  height: 100px;
+.text-forecast {
+  text-decoration: underline;
+  font-size: 16px;
+  font-weight: bolder;
 }
